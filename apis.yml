@@ -1,22 +1,62 @@
 aid: wyzecam
-name: Wyzecam
-description: 'Wyzecam is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+name: Wyze Labs
+description: 'Wyze Labs (wyze.com, formerly wyzecam.com) is a Seattle-area smart home
+  company backed by Norwest Venture Partners, selling affordable security cameras,
+  doorbells, locks, lighting, and sensors. Wyze publishes an official Developer API
+  Console where users generate an API key (one per account, valid one year) to obtain
+  access and refresh tokens for third-party integrations such as Home Bridge, and
+  its Shopify storefront exposes an agent-ready commerce surface: llms.txt/agents.md
+  instructions, OpenID Connect discovery, and a Universal Commerce Protocol (UCP)
+  merchant profile with a hosted MCP shopping endpoint.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.wyze.com/cdn/shop/files/Wyze_Ecosystem_Share.png?v=1781726389
 url: https://raw.githubusercontent.com/api-evangelist/wyzecam/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-- Unknown
-apis: []
+- Smart Home
+- Cameras
+- IoT
+- Home Security
+- Consumer Electronics
+- Video
+apis:
+- name: Wyze Developer API
+  description: Official Wyze token-issuance API for third-party integrations. Users
+    create an API key in the Wyze Developer API Console, then POST to /api/user/login
+    with Keyid and Apikey headers to obtain an access token (valid 2 days) and refresh
+    token (valid 30 days), refreshed via api.wyzecam.com/app/user/refresh_token. The
+    login endpoint is rate limited.
+  humanURL: https://support.wyze.com/hc/en-us/articles/16129834216731-Creating-an-API-Key
+  baseURL: https://auth-prod.api.wyze.com
+  tags:
+  - Authentication
+  - API Keys
+  - Tokens
+  - Smart Home
+  properties:
+  - type: Documentation
+    url: https://support.wyze.com/hc/en-us/articles/16129834216731-Creating-an-API-Key
+  - type: Portal
+    url: https://developer-api-console.wyze.com
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +64,18 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://wyzecam.com
+  url: https://www.wyze.com
+- type: DeveloperPortal
+  url: https://developer-api-console.wyze.com
+- type: Documentation
+  url: https://support.wyze.com/hc/en-us/articles/16129834216731-Creating-an-API-Key
+- type: Support
+  url: https://support.wyze.com/hc
+- type: Blog
+  url: https://www.wyze.com/blogs/smart-home
+- type: Login
+  url: https://www.wyze.com/account/login
+- type: TermsOfService
+  url: https://www.wyze.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.wyze.com/policies/privacy-policy
