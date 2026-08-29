@@ -8,6 +8,17 @@ description: 'Wyze Labs (wyze.com, formerly wyzecam.com) is a Seattle-area smart
   its Shopify storefront exposes an agent-ready commerce surface: llms.txt/agents.md
   instructions, OpenID Connect discovery, and a Universal Commerce Protocol (UCP)
   merchant profile with a hosted MCP shopping endpoint.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
